@@ -19,7 +19,7 @@ Only return the numeric score, no explanation."""
 
 def eval_translation(source: str, translation: str) -> float:
     """Evaluate translation quality using Gemini API."""
-    chat = client.chats.create(model="gemini-2.0-flash")
+    chat = client.chats.create(model="gemini-2.5-flash")
     response = chat.send_message(
         message=EVAL_PROMPT.format(prompt=source, response=translation)
     )
